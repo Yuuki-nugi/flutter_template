@@ -10,7 +10,6 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       id: json['id'] as String,
       username: json['username'] as String,
       display_name: json['display_name'] as String,
-      avatar_path: json['avatar_path'] as String,
       created_at: const CreatedAtField().fromJson(json['created_at']),
       updated_at: const UpdatedAtField().fromJson(json['updated_at']),
     );
@@ -20,7 +19,6 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'id': instance.id,
       'username': instance.username,
       'display_name': instance.display_name,
-      'avatar_path': instance.avatar_path,
       'created_at': _$JsonConverterToJson<dynamic, DateTime>(
           instance.created_at, const CreatedAtField().toJson),
       'updated_at': _$JsonConverterToJson<dynamic, DateTime>(

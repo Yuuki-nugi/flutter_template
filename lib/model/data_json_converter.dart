@@ -19,6 +19,9 @@ class UpdatedAtField implements JsonConverter<DateTime, dynamic> {
 
   @override
   DateTime fromJson(dynamic timestamp) {
+    if (timestamp == null) {
+      return DateTime.now();
+    }
     return DateTime.parse(timestamp);
   }
 

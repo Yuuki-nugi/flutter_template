@@ -23,7 +23,6 @@ mixin _$User {
   String get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String get display_name => throw _privateConstructorUsedError;
-  String get avatar_path => throw _privateConstructorUsedError;
   @CreatedAtField()
   DateTime? get created_at => throw _privateConstructorUsedError;
   @UpdatedAtField()
@@ -47,7 +46,6 @@ abstract class $UserCopyWith<$Res> {
       {String id,
       String username,
       String display_name,
-      String avatar_path,
       @CreatedAtField() DateTime? created_at,
       @UpdatedAtField() DateTime? updated_at});
 }
@@ -70,7 +68,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? id = null,
     Object? username = null,
     Object? display_name = null,
-    Object? avatar_path = null,
     Object? created_at = freezed,
     Object? updated_at = freezed,
   }) {
@@ -86,10 +83,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       display_name: null == display_name
           ? _value.display_name
           : display_name // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatar_path: null == avatar_path
-          ? _value.avatar_path
-          : avatar_path // ignore: cast_nullable_to_non_nullable
               as String,
       created_at: freezed == created_at
           ? _value.created_at
@@ -114,7 +107,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       {String id,
       String username,
       String display_name,
-      String avatar_path,
       @CreatedAtField() DateTime? created_at,
       @UpdatedAtField() DateTime? updated_at});
 }
@@ -134,7 +126,6 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? id = null,
     Object? username = null,
     Object? display_name = null,
-    Object? avatar_path = null,
     Object? created_at = freezed,
     Object? updated_at = freezed,
   }) {
@@ -150,10 +141,6 @@ class __$$UserImplCopyWithImpl<$Res>
       display_name: null == display_name
           ? _value.display_name
           : display_name // ignore: cast_nullable_to_non_nullable
-              as String,
-      avatar_path: null == avatar_path
-          ? _value.avatar_path
-          : avatar_path // ignore: cast_nullable_to_non_nullable
               as String,
       created_at: freezed == created_at
           ? _value.created_at
@@ -174,7 +161,6 @@ class _$UserImpl implements _User {
       {required this.id,
       required this.username,
       required this.display_name,
-      required this.avatar_path,
       @CreatedAtField() required this.created_at,
       @UpdatedAtField() required this.updated_at});
 
@@ -188,8 +174,6 @@ class _$UserImpl implements _User {
   @override
   final String display_name;
   @override
-  final String avatar_path;
-  @override
   @CreatedAtField()
   final DateTime? created_at;
   @override
@@ -198,7 +182,7 @@ class _$UserImpl implements _User {
 
   @override
   String toString() {
-    return 'User(id: $id, username: $username, display_name: $display_name, avatar_path: $avatar_path, created_at: $created_at, updated_at: $updated_at)';
+    return 'User(id: $id, username: $username, display_name: $display_name, created_at: $created_at, updated_at: $updated_at)';
   }
 
   @override
@@ -211,8 +195,6 @@ class _$UserImpl implements _User {
                 other.username == username) &&
             (identical(other.display_name, display_name) ||
                 other.display_name == display_name) &&
-            (identical(other.avatar_path, avatar_path) ||
-                other.avatar_path == avatar_path) &&
             (identical(other.created_at, created_at) ||
                 other.created_at == created_at) &&
             (identical(other.updated_at, updated_at) ||
@@ -221,8 +203,8 @@ class _$UserImpl implements _User {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, username, display_name,
-      avatar_path, created_at, updated_at);
+  int get hashCode => Object.hash(
+      runtimeType, id, username, display_name, created_at, updated_at);
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -245,7 +227,6 @@ abstract class _User implements User {
       {required final String id,
       required final String username,
       required final String display_name,
-      required final String avatar_path,
       @CreatedAtField() required final DateTime? created_at,
       @UpdatedAtField() required final DateTime? updated_at}) = _$UserImpl;
 
@@ -257,8 +238,6 @@ abstract class _User implements User {
   String get username;
   @override
   String get display_name;
-  @override
-  String get avatar_path;
   @override
   @CreatedAtField()
   DateTime? get created_at;

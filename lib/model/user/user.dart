@@ -10,7 +10,6 @@ class User with _$User {
       {required String id,
       required String username,
       required String display_name,
-      required String avatar_path,
       @CreatedAtField() required DateTime? created_at,
       @UpdatedAtField() required DateTime? updated_at}) = _User;
 
